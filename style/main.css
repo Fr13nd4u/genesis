@@ -19,8 +19,7 @@ p {
 }
 
 header img {
-    height: 3rem;
-    margin-top: -15px;
+    height: 4rem;
 }
 
 .navbar {
@@ -55,9 +54,8 @@ header img {
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:visited {
-    color: rgba(255,255,255,1);
     font-size: 2.5rem;
-    font-weight: 600;
+    transition-duration: 3s
 }
 
 .banner {
@@ -114,7 +112,8 @@ header img {
     z-index: 10;
 }
 
-.contentBox h1 {
+.contentBox h1,
+.contentBox h2 {
     font-weight: 800;
     color: #fff;
     text-transform: uppercase;
@@ -340,6 +339,11 @@ footer {
 }
 
 @media (min-width: 992px) {
+
+    .navbar-light .navbar-brand:hover {
+        transform: rotateY(360deg);
+    }
+
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -347,6 +351,10 @@ footer {
 }
 
 @media (max-width: 992px) {
+
+    header img {
+        height: 3rem;
+    }
 
     .navbar-light .navbar-toggler {
         background: #fff;
@@ -358,6 +366,7 @@ footer {
         padding: 100px 0;
     }
     .contentBox h1,
+    .contentBox h2,
     .sec2 h2 {
         font-size: 2rem;
     }
