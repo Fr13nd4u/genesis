@@ -55,7 +55,6 @@ header img {
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:visited {
     font-size: 2.5rem;
-    transition-duration: 3s
 }
 
 .banner {
@@ -69,7 +68,8 @@ header img {
 }
 
 .banner:before,
-.sec2:before,
+/* .sec2:before, */
+.solutions:before,
 .contact:before {
     content: '';
     position: absolute;
@@ -82,7 +82,8 @@ header img {
 }
 
 .banner:after,
-.sec2:after,
+/* .sec2:after, */
+.solutions:after,
 .contact:after {
     content: '';
     position: absolute;
@@ -120,7 +121,8 @@ header img {
     font-size: 5rem;
 }
 
-.contentBox p {
+.contentBox p,
+.headerText ol li {
     color: #fff;
     font-size: 1.3rem;
 }
@@ -187,7 +189,7 @@ header img {
     font-weight: 500;
 }
 
-.sec2 {
+/* .sec2 {
     position: relative;
     background: url(../img/banner2.jpg);
     background-size: cover;
@@ -211,6 +213,25 @@ header img {
     outline: none;
     font-weight: 500;
     margin-top: 20px;
+} */
+
+.solutions {
+    position: relative;
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 27%;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.headerText ol li {
+    list-style: square inside;
 }
 
 .blog {
@@ -338,10 +359,15 @@ footer {
     text-decoration: none;
 }
 
+@keyframes spin {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
 @media (min-width: 992px) {
 
     .navbar-light .navbar-brand:hover {
-        transform: rotateY(360deg);
+        animation: spin infinite linear 2s;
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -392,6 +418,10 @@ footer {
         height: 200px;
     }
 
+    .headerText ol li {
+        font-size: 1.1rem;
+    }
+
     .contact {
         padding: 20px 0;
     }
@@ -422,8 +452,13 @@ footer {
         transition: 0.5s;
     }
 
-    .sec2 {
+    .solutions {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    /* .sec2 {
         height: auto;
         padding: 40px 0;
-    }
+    } */
 }
